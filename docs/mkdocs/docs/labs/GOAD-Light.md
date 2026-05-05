@@ -1,6 +1,6 @@
 # GOAD-Light
 
-This is a light version of goad without the orionptoopslabs domain. This lab was build for computer with less performance (min ~20GB).
+This is a light version of goad without the orionptopslabs domain. This lab was build for computer with less performance (min ~20GB).
 
 ![GOAD Light overview](../img/GOAD-Light_schema.png)
 
@@ -83,7 +83,7 @@ This lab is actually composed of five virtual machines:
         - Admins : eddard.stark (U), catelyn.stark (U), robb.stark (U)
         - RDP: Stark(G)
 
-    - SRV02 : castelblack.orionptoopslabs.local (Windows Server 2019) (IIS, MSSQL, SMB share)
+    - SRV02 : castelblack.orionptopslabs.local (Windows Server 2019) (IIS, MSSQL, SMB share)
         - Admins: jeor.mormont (U)
         - RDP: Night Watch (G), Mormont (G), Stark (G)
         - IIS : allow asp upload, run as NT Authority/network

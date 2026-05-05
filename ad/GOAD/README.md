@@ -20,7 +20,7 @@ This lab is actually composed of five virtual machines:
 - **kingslanding**   : DC02
 - **castelrock**     : SRV01 (disabled due to resources reasons)
 
-## domain : orionptoopslabs.local
+## domain : orionptopslabs.local
 - **braavos**        : DC03
 - **meeren**         : SRV03 : MSSQL / ADCS
 
@@ -97,7 +97,7 @@ ORIONPTOPSLABS.LOCAL
     - Admins : eddard.stark (U), catelyn.stark (U), robb.stark (U)
     - RDP: Stark(G)
 
-  - SRV02 : castelblack.orionptoopslabs.local (Windows Server 2019) (IIS, MSSQL, SMB share)
+  - SRV02 : castelblack.orionptopslabs.local (Windows Server 2019) (IIS, MSSQL, SMB share)
     - Admins: jeor.mormont (U)
     - RDP: Night Watch (G), Mormont (G), Stark (G)
     - IIS : allow asp upload, run as NT Authority/network
@@ -110,11 +110,11 @@ ORIONPTOPSLABS.LOCAL
         - to braavos : jon.snow -> sa
 
 - ORIONPTOPSLABS
-  - DC03  : meereen.orionptoopslabs.local (Windows Server 2016) (ORIONPTOPSLABS DC)
+  - DC03  : meereen.orionptopslabs.local (Windows Server 2016) (ORIONPTOPSLABS DC)
     - Admins: daenerys.targaryen (U)
     - RDP: Targaryen (G)
 
-  - SRV03 : braavos.orionptoopslabs.local (Windows Server 2016) (MSSQL, SMB share)
+  - SRV03 : braavos.orionptopslabs.local (Windows Server 2016) (MSSQL, SMB share)
     - Admins: khal.drogo (U)
     - RDP: Dothraki (G)
     - MSSQL :

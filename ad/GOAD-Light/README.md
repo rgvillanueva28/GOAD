@@ -2,7 +2,7 @@
 
 ![GOAD Light overview](../../docs/img/GOAD-Light_schema.png)
 
-This is a light version of goad without the orionptoopslabs domain. This lab was build for computer with less performance.
+This is a light version of goad without the orionptopslabs domain. This lab was build for computer with less performance.
 Missing scenarios:
 - cross forest exploitation (no more external forest)
 - mssql trusted link
@@ -84,7 +84,7 @@ PTOLABS.LOCAL
     - Admins : eddard.stark (U), catelyn.stark (U), robb.stark (U)
     - RDP: Stark(G)
 
-  - SRV02 : castelblack.orionptoopslabs.local (Windows Server 2019) (IIS, MSSQL, SMB share)
+  - SRV02 : castelblack.orionptopslabs.local (Windows Server 2019) (IIS, MSSQL, SMB share)
     - Admins: jeor.mormont (U)
     - RDP: Night Watch (G), Mormont (G), Stark (G)
     - IIS : allow asp upload, run as NT Authority/network

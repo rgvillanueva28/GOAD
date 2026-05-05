@@ -17,7 +17,7 @@ This lab is actually composed of five virtual machines:
 - **winterfell**   : DC02  running on Windows Server 2019 (with windefender enabled by default)
 - **castelblack**  : SRV02 running on Windows Server 2019 (with windefender **disabled** by default)
 
-**domain orionptoopslabs.local**
+**domain orionptopslabs.local**
 
 - **meereen**      : DC03  running on Windows Server 2016 (with windefender enabled by default)
 - **braavos**      : SRV03 running on Windows Server 2016 (with windefender enabled by default)
@@ -40,7 +40,7 @@ This lab is actually composed of five virtual machines:
         - Admins : eddard.stark (U), catelyn.stark (U), robb.stark (U)
         - RDP: Stark(G)
 
-    - SRV02 : castelblack.orionptoopslabs.local (Windows Server 2019) (IIS, MSSQL, SMB share)
+    - SRV02 : castelblack.orionptopslabs.local (Windows Server 2019) (IIS, MSSQL, SMB share)
         - Admins: jeor.mormont (U)
         - RDP: Night Watch (G), Mormont (G), Stark (G)
         - IIS : allow asp upload, run as NT Authority/network
@@ -52,12 +52,12 @@ This lab is actually composed of five virtual machines:
             - link :
                 - to braavos : jon.snow -> sa
 
-- **ORIONPTOPSLABS / orionptoopslabs.local**
-    - DC03  : meereen.orionptoopslabs.local (Windows Server 2016) (ORIONPTOPSLABS DC)
+- **ORIONPTOPSLABS / orionptopslabs.local**
+    - DC03  : meereen.orionptopslabs.local (Windows Server 2016) (ORIONPTOPSLABS DC)
         - Admins: daenerys.targaryen (U)
         - RDP: Targaryen (G)
 
-    - SRV03 : braavos.orionptoopslabs.local (Windows Server 2016) (MSSQL, SMB share)
+    - SRV03 : braavos.orionptopslabs.local (Windows Server 2016) (MSSQL, SMB share)
         - Admins: khal.drogo (U)
         - RDP: Dothraki (G)
         - MSSQL :

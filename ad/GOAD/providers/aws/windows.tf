@@ -21,7 +21,7 @@
 }
 "dc03" = {
   name               = "dc03"
-  domain             = "orionptoopslabs.local"
+  domain             = "orionptopslabs.local"
   windows_sku        = "2016-Datacenter"
   ami                = "ami-053492b4735046f1c"
   instance_type      = "t2.medium"
@@ -39,7 +39,7 @@
 }
 "srv03" = {
   name               = "srv03"
-  domain             = "orionptoopslabs.local"
+  domain             = "orionptopslabs.local"
   windows_sku        = "2016-Datacenter"
   ami                = "ami-053492b4735046f1c"
   instance_type      = "t2.medium"

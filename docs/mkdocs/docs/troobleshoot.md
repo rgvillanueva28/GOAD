@@ -114,7 +114,7 @@ vagrant reload GOAD-SRV03 --provisioning
 
 ```
 An exception occurred during task execution. To see the full traceback, use -vvv. The error was:    at Microsoft.ActiveDirectory.Management.Commands.ADCmdletBase`1.BeginProcessing()
-failed: [dc02] (item={'key': 'AcrossTheSea', 'value': ['orionptoopslabs.local\\daenerys.targaryen']}) => {"ansible_loop_var": "item", "attempts": 3, "changed": false, "item": {"key": "AcrossTheSea", "value": ["orionptoopslabs.local\\daenerys.targaryen"]}, "msg": "Unhandled exception while executing module: The server has rejected the client credentials."}
+failed: [dc02] (item={'key': 'AcrossTheSea', 'value': ['orionptopslabs.local\\daenerys.targaryen']}) => {"ansible_loop_var": "item", "attempts": 3, "changed": false, "item": {"key": "AcrossTheSea", "value": ["orionptopslabs.local\\daenerys.targaryen"]}, "msg": "Unhandled exception while executing module: The server has rejected the client credentials."}
 ```
 
 - something go wrong with the trust, all the links are not fully establish
@@ -128,7 +128,7 @@ failed: [dc02] (item={'key': 'AcrossTheSea', 'value': ['orionptoopslabs.local\\d
 
 ```bash
 An exception occurred during task execution. To see the full traceback, use -vvv. The error was:    at Microsoft.ActiveDirectory.Management.Commands.ADCmdletBase`1.BeginProcessing()
-failed: [192.168.56.xx] (item={'key': 'DragonsFriends', 'value': ['ptolabs.local\\tyron.lannister', 'orionptoopslabs.local\\daenerys.targaryen']}) => {"ansible_loop_var": "item", "attempts": 3, "changed": false, "item": {"key": "DragonsFriends", "value": ["north.ptolabs.local\\jon.snow", "ptolabs.local\\tyron.lannister", "orionptoopslabs.local\\daenerys.targaryen"]}, "msg": "Unhandled exception while executing module: Either the target name is incorrect or the server has rejected the client credentials."}
+failed: [192.168.56.xx] (item={'key': 'DragonsFriends', 'value': ['ptolabs.local\\tyron.lannister', 'orionptopslabs.local\\daenerys.targaryen']}) => {"ansible_loop_var": "item", "attempts": 3, "changed": false, "item": {"key": "DragonsFriends", "value": ["north.ptolabs.local\\jon.snow", "ptolabs.local\\tyron.lannister", "orionptopslabs.local\\daenerys.targaryen"]}, "msg": "Unhandled exception while executing module: Either the target name is incorrect or the server has rejected the client credentials."}
 ```
 
 ## Error Add-Warning

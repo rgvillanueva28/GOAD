@@ -292,7 +292,7 @@ srv02
             },
             "multi_domain_groups_member" : {
                 "AcrossTheSea" : [
-                    "orionptoopslabs.local\\daenerys.targaryen"
+                    "orionptopslabs.local\\daenerys.targaryen"
                 ]
             },
 ```
@@ -308,7 +308,7 @@ srv02
         "acls" : {
             "GenericAll_khal_viserys" : {"for": "khal.drogo", "to": "viserys.targaryen", "right": "GenericAll", "inheritance": "None"},
             "GenericAll_spy_jorah" : {"for": "Spys", "to": "jorah.mormont", "right": "GenericAll", "inheritance": "None"},
-            "GenericAll_khal_esc4" : {"for": "khal.drogo", "to": "CN=ESC4,CN=Certificate Templates,CN=Public Key Services,CN=Services,CN=Configuration,DC=orionptoopslabs,DC=local", "right": "GenericAll", "inheritance": "None"},
+            "GenericAll_khal_esc4" : {"for": "khal.drogo", "to": "CN=ESC4,CN=Certificate Templates,CN=Public Key Services,CN=Services,CN=Configuration,DC=orionptopslabs,DC=local", "right": "GenericAll", "inheritance": "None"},
             "WriteProperty_petyer_domadmin" : {"for": "viserys.targaryen", "to": "jorah.mormont", "right": "WriteProperty", "inheritance": "All"},
             "GenericWrite_DragonsFriends_braavos" : {"for": "DragonsFriends", "to": "braavoos$", "right": "GenericWrite", "inheritance": "None"}
         },
@@ -381,10 +381,10 @@ srv02
     "domains" : {
         "ptolabs.local" : {
             ...
-            "trust" : "orionptoopslabs.local",
+            "trust" : "orionptopslabs.local",
             ...
         },
-        "orionptoopslabs.local" : {
+        "orionptopslabs.local" : {
             ...
             "trust" : "ptolabs.local",
 ```
@@ -394,7 +394,7 @@ srv02
 
 ```
    "domains" : {
-        "orionptoopslabs.local" : {
+        "orionptopslabs.local" : {
             ...
             "ca_server": "Braavos",
 ```

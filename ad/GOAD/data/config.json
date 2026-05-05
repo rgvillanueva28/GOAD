@@ -160,7 +160,7 @@
                 },
                 "linked_servers": {
                     "BRAAVOS" : {
-                        "data_src": "braavos.orionptoopslabs.local",
+                        "data_src": "braavos.orionptopslabs.local",
                         "users_mapping": [
                             {"local_login": "NORTH\\jon.snow","remote_login": "sa", "remote_password": "sa_P@ssw0rd!Ess0s"}
                         ]
@@ -172,15 +172,15 @@
             "hostname" : "meereen",
             "type" : "dc",
             "local_admin_password": "Ufe-bVXSx9rk",
-            "domain" : "orionptoopslabs.local",
-            "path" : "DC=orionptoopslabs,DC=local",
+            "domain" : "orionptopslabs.local",
+            "path" : "DC=orionptopslabs,DC=local",
             "local_groups" : {
                 "Administrators" : [
-                    "orionptoopslabs\\daenerys.targaryen",
-                    "orionptoopslabs\\greatmaster"
+                    "orionptopslabs\\daenerys.targaryen",
+                    "orionptopslabs\\greatmaster"
                 ],
                 "Remote Desktop Users" : [
-                    "orionptoopslabs\\Targaryen"
+                    "orionptopslabs\\Targaryen"
                 ]
             },
             "scripts" : ["asrep_roasting2.ps1"],
@@ -188,7 +188,7 @@
             "vulns_vars" : {
                 "adcs_esc7": {
                     "viserys": {
-                        "ca_manager": "orionptoopslabs\\viserys.targaryen"
+                        "ca_manager": "orionptopslabs\\viserys.targaryen"
                     }
                 },
                 "adcs_esc13": {
@@ -203,16 +203,16 @@
             "hostname" : "braavos",
             "type" : "server",
             "local_admin_password": "978i2pF43UJ-",
-            "domain" : "orionptoopslabs.local",
-            "path" : "DC=orionptoopslabs,DC=local",
+            "domain" : "orionptopslabs.local",
+            "path" : "DC=orionptopslabs,DC=local",
             "use_laps": true,
             "local_groups" : {
                 "Administrators" : [
-                    "orionptoopslabs\\khal.drogo"
+                    "orionptopslabs\\khal.drogo"
                 ]
             },
             "Remote Desktop Users" : [
-                "orionptoopslabs\\Dothraki"
+                "orionptopslabs\\Dothraki"
             ],
             "scripts" : [],
             "vulns" : ["openshares","disable_firewall", "adcs_esc6", "adcs_esc11"],
@@ -239,13 +239,13 @@
         }
     },
     "domains" : {
-        "orionptoopslabs.local" : {
+        "orionptopslabs.local" : {
             "dc": "dc03",
             "domain_password" : "Ufe-bVXSx9rk",
             "netbios_name": "ORIONPTOPSLABS",
             "ca_server": "Braavos",
             "trust" : "ptolabs.local",
-            "laps_path": "OU=Laps,DC=orionptoopslabs,DC=local",
+            "laps_path": "OU=Laps,DC=orionptopslabs,DC=local",
             "organisation_units" : {
             },
             "laps_readers": [
@@ -255,47 +255,47 @@
             "groups" : {
                 "universal" : {
                     "greatmaster" : {
-                        "path" : "CN=Users,DC=orionptoopslabs,DC=local"
+                        "path" : "CN=Users,DC=orionptopslabs,DC=local"
                     }
                 },
                 "global" : {
                     "Targaryen" : {
                         "managed_by" : "viserys.targaryen",
-                        "path" : "CN=Users,DC=orionptoopslabs,DC=local"
+                        "path" : "CN=Users,DC=orionptopslabs,DC=local"
                     },
                     "Dothraki" : {
                         "managed_by" : "khal.drogo",
-                        "path" : "CN=Users,DC=orionptoopslabs,DC=local"
+                        "path" : "CN=Users,DC=orionptopslabs,DC=local"
                     },
                     "Dragons":{
                         "managed_by" : "Administrator",
-                        "path" : "CN=Users,DC=orionptoopslabs,DC=local"
+                        "path" : "CN=Users,DC=orionptopslabs,DC=local"
                     },
                     "QueenProtector":{
                         "managed_by" : "Administrator",
-                        "path" : "CN=Users,DC=orionptoopslabs,DC=local",
+                        "path" : "CN=Users,DC=orionptopslabs,DC=local",
                         "members" : ["ORIONPTOPSLABS\\Dragons"]
                     },
                     "Domain Admins":{
                         "managed_by" : "Administrator",
-                        "path" : "CN=Users,DC=orionptoopslabs,DC=local",
+                        "path" : "CN=Users,DC=orionptopslabs,DC=local",
                         "members" : ["ORIONPTOPSLABS\\QueenProtector"]
                     }
                 },
                 "domainlocal" : {
                     "DragonsFriends" : {
                         "managed_by" : "daenerys.targaryen",
-                        "path" : "CN=Users,DC=orionptoopslabs,DC=local"
+                        "path" : "CN=Users,DC=orionptopslabs,DC=local"
                     },
                     "Spys" : {
-                        "path" : "CN=Users,DC=orionptoopslabs,DC=local"
+                        "path" : "CN=Users,DC=orionptopslabs,DC=local"
                     }
                 }
             },
             "multi_domain_groups_member" : {
                 "DragonsFriends" : [
                     "ptolabs.local\\tyron.lannister",
-                    "orionptoopslabs.local\\daenerys.targaryen"
+                    "orionptopslabs.local\\daenerys.targaryen"
                 ],
                 "Spys" : [
                     "ptolabs.local\\Small Council"
@@ -304,15 +304,15 @@
             "gmsa" : {
                 "gmsa_account": {
                     "gMSA_Name" : "gmsaDragon",
-                    "gMSA_FQDN" : "gmsaDragon.orionptoopslabs.local",
-                    "gMSA_SPNs" : ["HTTP/braavos", "HTTP/braavos.orionptoopslabs.local"],
+                    "gMSA_FQDN" : "gmsaDragon.orionptopslabs.local",
+                    "gMSA_SPNs" : ["HTTP/braavos", "HTTP/braavos.orionptopslabs.local"],
                     "gMSA_HostNames" : ["braavos"]
                 }
             },
             "acls" : {
                 "GenericAll_khal_viserys" : {"for": "khal.drogo", "to": "viserys.targaryen", "right": "GenericAll", "inheritance": "None"},
                 "GenericAll_spy_jorah" : {"for": "Spys", "to": "jorah.mormont", "right": "GenericAll", "inheritance": "None"},
-                "GenericAll_khal_esc4" : {"for": "khal.drogo", "to": "CN=ESC4,CN=Certificate Templates,CN=Public Key Services,CN=Services,CN=Configuration,DC=orionptoopslabs,DC=local", "right": "GenericAll", "inheritance": "None"},
+                "GenericAll_khal_esc4" : {"for": "khal.drogo", "to": "CN=ESC4,CN=Certificate Templates,CN=Public Key Services,CN=Services,CN=Configuration,DC=orionptopslabs,DC=local", "right": "GenericAll", "inheritance": "None"},
                 "WriteProperty_petyer_domadmin" : {"for": "viserys.targaryen", "to": "jorah.mormont", "right": "WriteProperty", "inheritance": "All"},
                 "GenericWrite_DragonsFriends_braavos" : {"for": "DragonsFriends", "to": "braavos$", "right": "GenericWrite", "inheritance": "None"},
                 "GenericAll_missandei_khal" : {"for": "missandei", "to": "khal.drogo", "right": "GenericAll", "inheritance": "None"},
@@ -327,7 +327,7 @@
                     "city"        : "-",
                     "description" : "Darnerys Targaryen",
                     "groups"      : ["Targaryen", "Domain Admins"],
-                    "path"        : "CN=Users,DC=orionptoopslabs,DC=local"
+                    "path"        : "CN=Users,DC=orionptopslabs,DC=local"
                 },
                 "viserys.targaryen" : {
                     "firstname"   : "viserys",
@@ -336,7 +336,7 @@
                     "city"        : "-",
                     "description" : "Viserys Targaryen",
                     "groups"      : ["Targaryen"],
-                    "path"        : "CN=Users,DC=orionptoopslabs,DC=local"
+                    "path"        : "CN=Users,DC=orionptopslabs,DC=local"
                 },
                 "khal.drogo" : {
                     "firstname"   : "khal",
@@ -345,7 +345,7 @@
                     "city"        : "-",
                     "description" : "Khal Drogo",
                     "groups"      : ["Dothraki"],
-                    "path"        : "CN=Users,DC=orionptoopslabs,DC=local"
+                    "path"        : "CN=Users,DC=orionptopslabs,DC=local"
                 },
                 "jorah.mormont" : {
                     "firstname"   : "jorah",
@@ -354,7 +354,7 @@
                     "city"        : "-",
                     "description" : "Jorah Mormont",
                     "groups"      : ["Targaryen"],
-                    "path"        : "CN=Users,DC=orionptoopslabs,DC=local"
+                    "path"        : "CN=Users,DC=orionptopslabs,DC=local"
                 },
                 "missandei" : {
                     "firstname"   : "missandei",
@@ -363,7 +363,7 @@
                     "city"        : "-",
                     "description" : "missandei",
                     "groups"      : [],
-                    "path"        : "CN=Users,DC=orionptoopslabs,DC=local"
+                    "path"        : "CN=Users,DC=orionptopslabs,DC=local"
                 },
                 "drogon" : {
                     "firstname"   : "drogon",
@@ -372,7 +372,7 @@
                     "city"        : "-",
                     "description" : "drogon",
                     "groups"      : ["Dragons"],
-                    "path"        : "CN=Users,DC=orionptoopslabs,DC=local"
+                    "path"        : "CN=Users,DC=orionptopslabs,DC=local"
                 },
                 "sql_svc" : {
                     "firstname"   : "sql",
@@ -381,8 +381,8 @@
                     "city"        : "-",
                     "description" : "sql service",
                     "groups"      : [],
-                    "path"        : "CN=Users,DC=orionptoopslabs,DC=local",
-                    "spns"        : ["MSSQLSvc/braavos.orionptoopslabs.local:1433","MSSQLSvc/braavos.orionptoopslabs.local"]
+                    "path"        : "CN=Users,DC=orionptopslabs,DC=local",
+                    "spns"        : ["MSSQLSvc/braavos.orionptopslabs.local:1433","MSSQLSvc/braavos.orionptopslabs.local"]
                 }
             }
         },
@@ -539,7 +539,7 @@
             "dc": "dc01",
             "domain_password" : "8dCT-DJjgScp",
             "netbios_name": "PTOLABS",
-            "trust" : "orionptoopslabs.local",
+            "trust" : "orionptopslabs.local",
             "laps_path": "OU=Laps,DC=ptolabs,DC=local",
             "organisation_units" : {
                 "Vale"        : { "path" : "DC=ptolabs,DC=local"},
@@ -583,7 +583,7 @@
             },
             "multi_domain_groups_member" : {
                 "AcrossTheNarrowSea" : [
-                    "orionptoopslabs.local\\daenerys.targaryen"
+                    "orionptopslabs.local\\daenerys.targaryen"
                 ]
             },
             "acls" : {

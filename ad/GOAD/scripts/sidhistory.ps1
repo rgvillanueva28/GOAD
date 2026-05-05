@@ -1,1 +1,1 @@
-netdom trust ptolabs.local /d:orionptoopslabs.local /enablesidhistory:yes
+netdom trust ptolabs.local /d:orionptopslabs.local /enablesidhistory:yes

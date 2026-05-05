@@ -1,1 +1,1 @@
-netdom trust sevenkingdoms.local /d:essos.local /enablesidhistory:yes
+netdom trust ptolabs.local /d:orionptoopslabs.local /enablesidhistory:yes

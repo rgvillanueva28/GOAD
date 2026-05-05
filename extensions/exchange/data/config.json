@@ -5,27 +5,27 @@
                 "hostname": "the-eyrie",
                 "type": "server",
                 "local_admin_password": "FP.xh5Fk9Z1c",
-                "domain": "sevenkingdoms.local",
-                "path": "DC=sevenkingdoms,DC=local",
+                "domain": "ptolabs.local",
+                "path": "DC=ptolabs,DC=local",
                 "local_groups": {
                     "Administrators": [
-                        "sevenkingdoms\\lysa.arryn"
+                        "ptolabs\\lysa.arryn"
                     ],
                     "Remote Desktop Users": [
-                        "sevenkingdoms\\Arryn"
+                        "ptolabs\\Arryn"
                     ]
                 }
             }
         },
         "domains": {
-            "sevenkingdoms.local": {
+            "ptolabs.local": {
                 "organisation_units": {},
                 "groups": {
                     "universal": {},
                     "global": {
                         "Arryn": {
                             "managed_by": "lysa.arryn",
-                            "path": "OU=Vale,DC=sevenkingdoms,DC=local"
+                            "path": "OU=Vale,DC=ptolabs,DC=local"
                         }
                     },
                     "domainlocal": {}
@@ -40,7 +40,7 @@
                         "groups": [
                             "Arryn"
                         ],
-                        "path": "OU=Vale,DC=sevenkingdoms,DC=local"
+                        "path": "OU=Vale,DC=ptolabs,DC=local"
                     },
                     "robin.arryn": {
                         "firstname": "Robin",
@@ -51,7 +51,7 @@
                         "groups": [
                             "Arryn"
                         ],
-                        "path": "OU=Vale,DC=sevenkingdoms,DC=local"
+                        "path": "OU=Vale,DC=ptolabs,DC=local"
                     }
                 }
             }

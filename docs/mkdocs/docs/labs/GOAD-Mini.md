@@ -1,24 +1,24 @@
 # GOAD-Mini
 
-This is a minimalist version of goad with only sevenkingdoms.lab domain. This lab was build for a minimalist base to do test and try extensions.
+This is a minimalist version of goad with only ptolabs.lab domain. This lab was build for a minimalist base to do test and try extensions.
 
 ![goad_mini.png](../img/goad_mini.png)
 
 ## Servers
-**domain : sevenkingdoms.local**
+**domain : ptolabs.local**
 - **kingslanding** : DC01  running on Windows Server 2019 (with windefender enabled by default)
 
 ## Users/Groups and associated vulnerabilites/scenarios
 
-**SEVENKINGDOMS.LOCAL**
+**PTOLABS.LOCAL**
 
 - LANISTERS
     - tywin.lannister:   ACL forcechangepassword on jaime.lanister
     - jaime.lannister:   ACL genericwrite-on-user joffrey.baratheon
     - tyron.lannister:   ACL self-self-membership-on-group Small Council
-    - cersei.lannister:  DOMAIN ADMIN SEVENKINGDOMS
+    - cersei.lannister:  DOMAIN ADMIN PTOLABS
 - BARATHEON:           RDP on KINGSLANDING
-    - robert.baratheon:  DOMAIN ADMIN SEVENKINGDOMS
+    - robert.baratheon:  DOMAIN ADMIN PTOLABS
     - joffrey.baratheon: ACL Write DACL on tyron.lannister
     - renly.baratheon:
     - stannis.baratheon: ACL genericall-on-computer kingslanding / ACL writeproperty-self-membership Domain Admins
@@ -33,7 +33,7 @@ This is a minimalist version of goad with only sevenkingdoms.lab domain. This la
 
 ## Computers Users and group permissions
 
-- SEVENKINGDOMS
-    - DC01 : kingslanding.sevenkingdoms.local (Windows Server 2019) (SEVENKINGDOMS DC)
+- PTOLABS
+    - DC01 : kingslanding.ptolabs.local (Windows Server 2019) (PTOLABS DC)
         - Admins : robert.baratheon (U), cersei.lannister (U)
         - RDP: Small Council (G)

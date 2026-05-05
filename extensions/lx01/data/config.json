@@ -6,8 +6,8 @@
               "type" : "server",
               "os": "linux",
               "local_admin_password": "HGLXP@ssw_rd$",
-              "domain" : "sevenkingdoms.local", 
-              "path" : "DC=sevenkingdoms,DC=local",
+              "domain" : "ptolabs.local", 
+              "path" : "DC=ptolabs,DC=local",
               "local_groups" : {
                   "sudoers" : ["Baratheon"],
                   "ssh" : ["Lannister", "Baratheon"]

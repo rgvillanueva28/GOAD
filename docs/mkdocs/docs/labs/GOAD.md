@@ -8,16 +8,16 @@ GOAD is the first and main lab of this project. It contains 3 domains and 2 fore
 
 This lab is actually composed of five virtual machines:
 
-**domain sevenkingdoms.local**
+**domain ptolabs.local**
 
 - **kingslanding** : DC01  running on Windows Server 2019 (with windefender enabled by default)
 
-**domain north.sevenkingdoms.local**
+**domain north.ptolabs.local**
 
 - **winterfell**   : DC02  running on Windows Server 2019 (with windefender enabled by default)
 - **castelblack**  : SRV02 running on Windows Server 2019 (with windefender **disabled** by default)
 
-**domain essos.local**
+**domain orionptoopslabs.local**
 
 - **meereen**      : DC03  running on Windows Server 2016 (with windefender enabled by default)
 - **braavos**      : SRV03 running on Windows Server 2016 (with windefender enabled by default)
@@ -30,17 +30,17 @@ This lab is actually composed of five virtual machines:
 
 ## Computers Users and group permissions
 
-- **SEVENKINGDOMS / sevenkingdoms.local**
-    - DC01 : kingslanding.sevenkingdoms.local (Windows Server 2019) (SEVENKINGDOMS DC)
+- **PTOLABS / ptolabs.local**
+    - DC01 : kingslanding.ptolabs.local (Windows Server 2019) (PTOLABS DC)
         - Admins : robert.baratheon (U), cersei.lannister (U)
         - RDP: Small Council (G)
 
-- **NORTH / north.sevenkingdoms.local**
-    - DC02 : winterfell.north.sevenkingdoms.local (Windows Server 2019) (NORTH DC)
+- **NORTH / north.ptolabs.local**
+    - DC02 : winterfell.north.ptolabs.local (Windows Server 2019) (NORTH DC)
         - Admins : eddard.stark (U), catelyn.stark (U), robb.stark (U)
         - RDP: Stark(G)
 
-    - SRV02 : castelblack.essos.local (Windows Server 2019) (IIS, MSSQL, SMB share)
+    - SRV02 : castelblack.orionptoopslabs.local (Windows Server 2019) (IIS, MSSQL, SMB share)
         - Admins: jeor.mormont (U)
         - RDP: Night Watch (G), Mormont (G), Stark (G)
         - IIS : allow asp upload, run as NT Authority/network
@@ -52,12 +52,12 @@ This lab is actually composed of five virtual machines:
             - link :
                 - to braavos : jon.snow -> sa
 
-- **ESSOS / essos.local**
-    - DC03  : meereen.essos.local (Windows Server 2016) (ESSOS DC)
+- **ORIONPTOPSLABS / orionptoopslabs.local**
+    - DC03  : meereen.orionptoopslabs.local (Windows Server 2016) (ORIONPTOPSLABS DC)
         - Admins: daenerys.targaryen (U)
         - RDP: Targaryen (G)
 
-    - SRV03 : braavos.essos.local (Windows Server 2016) (MSSQL, SMB share)
+    - SRV03 : braavos.orionptoopslabs.local (Windows Server 2016) (MSSQL, SMB share)
         - Admins: khal.drogo (U)
         - RDP: Dothraki (G)
         - MSSQL :
@@ -72,7 +72,7 @@ This lab is actually composed of five virtual machines:
 - Graph of some scenarios is available here :
 ![diagram-GOAD_compromission_Path_dark](./../img/diagram-GOAD_compromission_Path_dark.png)
 
-NORTH.SEVENKINGDOMS.LOCAL
+NORTH.PTOLABS.LOCAL
 
 - STARKS:              RDP on WINTERFELL AND CASTELBLACK
     - arya.stark:        Execute as user on mssql, pass on all share
@@ -93,15 +93,15 @@ NORTH.SEVENKINGDOMS.LOCAL
      - jeor.mormont:      Admin castelblack, pass in sysvol script
 - AcrossTheSea :       cross forest group
 
-SEVENKINGDOMS.LOCAL
+PTOLABS.LOCAL
 
 - LANISTERS
     - tywin.lannister:   ACE forcechangepassword on jaime.lanister, password on sysvol cyphered
     - jaime.lannister:   ACE genericwrite-on-user joffrey.baratheon
     - tyron.lannister:   ACE self membership on small council
-    - cersei.lannister:  DOMAIN ADMIN SEVENKINGDOMS
+    - cersei.lannister:  DOMAIN ADMIN PTOLABS
 - BARATHEON:           RDP on KINGSLANDING
-    - robert.baratheon:  DOMAIN ADMIN SEVENKINGDOMS, protected user
+    - robert.baratheon:  DOMAIN ADMIN PTOLABS, protected user
     - joffrey.baratheon: ACE Write DACL on tyron.lannister
     - renly.baratheon:   WriteDACL on container, sensitive user
     - stannis.baratheon: ACE genericall-on-computer kingslanding 
@@ -113,11 +113,11 @@ SEVENKINGDOMS.LOCAL
 - KINGSGUARD :         ACE generic all on user stannis.baratheon
 - AccorsTheNarrowSea:       cross forest group
 
-ESSOS.LOCAL
+ORIONPTOPSLABS.LOCAL
 
 - TARGERYEN
     - missande :          ASREP roasting, generic all on khal
-    - daenerys.targaryen: DOMAIN ADMIN ESSOS
+    - daenerys.targaryen: DOMAIN ADMIN ORIONPTOPSLABS
     - viserys.targaryen:  ACE write property on jorah.mormont
     - jorah.mormont:      mssql execute as login / mssql trusted link / Read LAPS Password
 - DOTHRAKI

@@ -1,7 +1,7 @@
 # WS01 extension (Workstation 01)
 
 - Extension Name: ws01
-- Description: Add a Windows 10 workstation to the lab GOAD or GOAD Light in the domain sevenkingdoms.local
+- Description: Add a Windows 10 workstation to the lab GOAD or GOAD Light in the domain ptolabs.local
 - Machine name : {{lab_name}}-WS01
 - Compatible with labs :
   - GOAD

@@ -1,6 +1,6 @@
 # GOAD-Light
 
-This is a light version of goad without the essos domain. This lab was build for computer with less performance (min ~20GB).
+This is a light version of goad without the orionptoopslabs domain. This lab was build for computer with less performance (min ~20GB).
 
 ![GOAD Light overview](../img/GOAD-Light_schema.png)
 
@@ -14,11 +14,11 @@ Missing scenarios:
 ## Servers
 This lab is actually composed of five virtual machines:
 
-**domain : sevenkingdoms.local**
+**domain : ptolabs.local**
 
 - **kingslanding** : DC01  running on Windows Server 2019 (with windefender enabled by default)
 
-**domain : north.sevenkingdoms.local**
+**domain : north.ptolabs.local**
 
 - **winterfell**   : DC02  running on Windows Server 2019 (with windefender enabled by default)
 - **castelblack**  : SRV02 running on Windows Server 2019 (with windefender **disabled** by default)
@@ -28,7 +28,7 @@ This lab is actually composed of five virtual machines:
 
 - You can find a lot of the available scenarios on [https://mayfly277.github.io/categories/ad/](https://mayfly277.github.io/categories/goad/)
 
-**NORTH.SEVENKINGDOMS.LOCAL**
+**NORTH.PTOLABS.LOCAL**
 
 - STARKS:              RDP on WINTERFELL AND CASTELBLACK
     - arya.stark:        Execute as user on mssql
@@ -50,15 +50,15 @@ This lab is actually composed of five virtual machines:
     - jeor.mormont:      ACL writedacl-writeowner on group Night Watch
 - AcrossTheSea :       cross forest group
 
-**SEVENKINGDOMS.LOCAL**
+**PTOLABS.LOCAL**
 
 - LANISTERS
     - tywin.lannister:   ACL forcechangepassword on jaime.lanister
     - jaime.lannister:   ACL genericwrite-on-user joffrey.baratheon
     - tyron.lannister:   ACL self-self-membership-on-group Small Council
-    - cersei.lannister:  DOMAIN ADMIN SEVENKINGDOMS
+    - cersei.lannister:  DOMAIN ADMIN PTOLABS
 - BARATHEON:           RDP on KINGSLANDING
-    - robert.baratheon:  DOMAIN ADMIN SEVENKINGDOMS
+    - robert.baratheon:  DOMAIN ADMIN PTOLABS
     - joffrey.baratheon: ACL Write DACL on tyron.lannister
     - renly.baratheon:
     - stannis.baratheon: ACL genericall-on-computer kingslanding / ACL writeproperty-self-membership Domain Admins
@@ -73,17 +73,17 @@ This lab is actually composed of five virtual machines:
 
 ## Computers Users and group permissions
 
-- SEVENKINGDOMS
-    - DC01 : kingslanding.sevenkingdoms.local (Windows Server 2019) (SEVENKINGDOMS DC)
+- PTOLABS
+    - DC01 : kingslanding.ptolabs.local (Windows Server 2019) (PTOLABS DC)
         - Admins : robert.baratheon (U), cersei.lannister (U)
         - RDP: Small Council (G)
 
 - NORTH
-    - DC02 : winterfell.north.sevenkingdoms.local (Windows Server 2019) (NORTH DC)
+    - DC02 : winterfell.north.ptolabs.local (Windows Server 2019) (NORTH DC)
         - Admins : eddard.stark (U), catelyn.stark (U), robb.stark (U)
         - RDP: Stark(G)
 
-    - SRV02 : castelblack.essos.local (Windows Server 2019) (IIS, MSSQL, SMB share)
+    - SRV02 : castelblack.orionptoopslabs.local (Windows Server 2019) (IIS, MSSQL, SMB share)
         - Admins: jeor.mormont (U)
         - RDP: Night Watch (G), Mormont (G), Stark (G)
         - IIS : allow asp upload, run as NT Authority/network

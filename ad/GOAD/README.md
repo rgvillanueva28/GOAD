@@ -12,15 +12,15 @@ This lab is actually composed of five virtual machines:
 - **meereen**      : DC03  running on Windows Server 2016 (with windefender enabled by default)
 - **braavos**      : SRV03 running on Windows Server 2016 (with windefender enabled by default)
 
-## domain : north.sevenkingdoms.local
+## domain : north.ptolabs.local
 - **winterfell**     : DC01
 - **castelblack**    : SRV02 : MSSQL / IIS
 
-## domain : sevenkingdoms.local
+## domain : ptolabs.local
 - **kingslanding**   : DC02
 - **castelrock**     : SRV01 (disabled due to resources reasons)
 
-## domain : essos.local
+## domain : orionptoopslabs.local
 - **braavos**        : DC03
 - **meeren**         : SRV03 : MSSQL / ADCS
 
@@ -35,7 +35,7 @@ You can change the vm version in the Vagrantfile according to Stefan Scherer vag
 - Graph of some scenarios is available here :
 ![diagram-GOAD_compromission_Path_dark](./../../docs/img/diagram-GOAD_compromission_Path_dark.png)
 
-NORTH.SEVENKINGDOMS.LOCAL
+NORTH.PTOLABS.LOCAL
 - STARKS:              RDP on WINTERFELL AND CASTELBLACK
   - arya.stark:        Execute as user on mssql, pass on all share
   - eddard.stark:      DOMAIN ADMIN NORTH/ (bot 5min) LLMRN request to do NTLM relay with responder
@@ -55,14 +55,14 @@ NORTH.SEVENKINGDOMS.LOCAL
   - jeor.mormont:      Admin castelblack, pass in sysvol script
 - AcrossTheSea :       cross forest group
 
-SEVENKINGDOMS.LOCAL
+PTOLABS.LOCAL
 - LANISTERS
   - tywin.lannister:   ACE forcechangepassword on jaime.lanister, password on sysvol cyphered
   - jaime.lannister:   ACE genericwrite-on-user joffrey.baratheon
   - tyron.lannister:   ACE self membership on small council
-  - cersei.lannister:  DOMAIN ADMIN SEVENKINGDOMS
+  - cersei.lannister:  DOMAIN ADMIN PTOLABS
 - BARATHEON:           RDP on KINGSLANDING
-  - robert.baratheon:  DOMAIN ADMIN SEVENKINGDOMS, protected user
+  - robert.baratheon:  DOMAIN ADMIN PTOLABS, protected user
   - joffrey.baratheon: ACE Write DACL on tyron.lannister
   - renly.baratheon:   WriteDACL on container, sensitive user
   - stannis.baratheon: ACE genericall-on-computer kingslanding 
@@ -74,10 +74,10 @@ SEVENKINGDOMS.LOCAL
 - KINGSGUARD :         ACE generic all on user stannis.baratheon
 - AccorsTheNarrowSea:       cross forest group
 
-ESSOS.LOCAL
+ORIONPTOPSLABS.LOCAL
 - TARGERYEN
   - missande :          ASREP roasting, generic all on khal
-  - daenerys.targaryen: DOMAIN ADMIN ESSOS
+  - daenerys.targaryen: DOMAIN ADMIN ORIONPTOPSLABS
   - viserys.targaryen:  ACE write property on jorah.mormont
   - jorah.mormont:      mssql execute as login / mssql trusted link / Read LAPS Password
 - DOTHRAKI
@@ -87,17 +87,17 @@ ESSOS.LOCAL
 
 ## Computers Users and group permissions
 
-- SEVENKINGDOMS
-  - DC01 : kingslanding.sevenkingdoms.local (Windows Server 2019) (SEVENKINGDOMS DC)
+- PTOLABS
+  - DC01 : kingslanding.ptolabs.local (Windows Server 2019) (PTOLABS DC)
     - Admins : robert.baratheon (U), cersei.lannister (U)
     - RDP: Small Council (G)
 
 - NORTH
-  - DC02 : winterfell.north.sevenkingdoms.local (Windows Server 2019) (NORTH DC)
+  - DC02 : winterfell.north.ptolabs.local (Windows Server 2019) (NORTH DC)
     - Admins : eddard.stark (U), catelyn.stark (U), robb.stark (U)
     - RDP: Stark(G)
 
-  - SRV02 : castelblack.essos.local (Windows Server 2019) (IIS, MSSQL, SMB share)
+  - SRV02 : castelblack.orionptoopslabs.local (Windows Server 2019) (IIS, MSSQL, SMB share)
     - Admins: jeor.mormont (U)
     - RDP: Night Watch (G), Mormont (G), Stark (G)
     - IIS : allow asp upload, run as NT Authority/network
@@ -109,12 +109,12 @@ ESSOS.LOCAL
       - link :
         - to braavos : jon.snow -> sa
 
-- ESSOS
-  - DC03  : meereen.essos.local (Windows Server 2016) (ESSOS DC)
+- ORIONPTOPSLABS
+  - DC03  : meereen.orionptoopslabs.local (Windows Server 2016) (ORIONPTOPSLABS DC)
     - Admins: daenerys.targaryen (U)
     - RDP: Targaryen (G)
 
-  - SRV03 : braavos.essos.local (Windows Server 2016) (MSSQL, SMB share)
+  - SRV03 : braavos.orionptoopslabs.local (Windows Server 2016) (MSSQL, SMB share)
     - Admins: khal.drogo (U)
     - RDP: Dothraki (G)
     - MSSQL :
@@ -171,5 +171,5 @@ If you want to do that by hand:
 - Chocolatey is no more used and basic tools like git or notepad++ are no more installed by default (as chocolatey regularly crash the install due to hitting rate on multiples builds)
 - ELK is no more installed by default to save resources but you still can install it separately (see the blueteam/elk part)
 - Dragonstone vm as disappear and there is no more DC replication in the lab to save resources
-- Wintefell is now a domain controller for the subdomain north of the sevenkingdoms.local domain
+- Wintefell is now a domain controller for the subdomain north of the ptolabs.local domain
 

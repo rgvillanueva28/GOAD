@@ -5,17 +5,17 @@
             "hostname" : "kingslanding",
             "type" : "dc",
             "local_admin_password": "8dCT-DJjgScp",
-            "domain" : "sevenkingdoms.local",
-            "path" : "DC=sevenkingdoms,DC=local",
+            "domain" : "ptolabs.local",
+            "path" : "DC=ptolabs,DC=local",
             "local_groups" : {
                 "Administrators" : [
-                    "sevenkingdoms\\robert.baratheon",
-                    "sevenkingdoms\\cersei.lannister",
-                    "sevenkingdoms\\DragonRider"
+                    "ptolabs\\robert.baratheon",
+                    "ptolabs\\cersei.lannister",
+                    "ptolabs\\DragonRider"
                 ],
                 "Remote Desktop Users" : [
-                    "sevenkingdoms\\Small Council",
-                    "sevenkingdoms\\Baratheon"
+                    "ptolabs\\Small Council",
+                    "ptolabs\\Baratheon"
                 ]
             },
             "scripts" : ["sidhistory.ps1"],
@@ -29,8 +29,8 @@
             "hostname" : "winterfell",
             "type" : "dc",
             "local_admin_password": "NgtI75cKV+Pu",
-            "domain" : "north.sevenkingdoms.local",
-            "path" : "DC=north,DC=sevenkingdoms,DC=local",
+            "domain" : "north.ptolabs.local",
+            "path" : "DC=north,DC=ptolabs,DC=local",
             "local_groups" : {
                 "Administrators" : [
                     "north\\eddard.stark",
@@ -89,8 +89,8 @@
             "hostname" : "castelblack",
             "type" : "server",
             "local_admin_password": "NgtI75cKV+Pu",
-            "domain" : "north.sevenkingdoms.local",
-            "path" : "DC=north,DC=sevenkingdoms,DC=local",
+            "domain" : "north.ptolabs.local",
+            "path" : "DC=north,DC=ptolabs,DC=local",
             "use_laps": false,
             "local_groups" : {
                 "Administrators" : [
@@ -160,7 +160,7 @@
                 },
                 "linked_servers": {
                     "BRAAVOS" : {
-                        "data_src": "braavos.essos.local",
+                        "data_src": "braavos.orionptoopslabs.local",
                         "users_mapping": [
                             {"local_login": "NORTH\\jon.snow","remote_login": "sa", "remote_password": "sa_P@ssw0rd!Ess0s"}
                         ]
@@ -172,15 +172,15 @@
             "hostname" : "meereen",
             "type" : "dc",
             "local_admin_password": "Ufe-bVXSx9rk",
-            "domain" : "essos.local",
-            "path" : "DC=essos,DC=local",
+            "domain" : "orionptoopslabs.local",
+            "path" : "DC=orionptoopslabs,DC=local",
             "local_groups" : {
                 "Administrators" : [
-                    "essos\\daenerys.targaryen",
-                    "essos\\greatmaster"
+                    "orionptoopslabs\\daenerys.targaryen",
+                    "orionptoopslabs\\greatmaster"
                 ],
                 "Remote Desktop Users" : [
-                    "essos\\Targaryen"
+                    "orionptoopslabs\\Targaryen"
                 ]
             },
             "scripts" : ["asrep_roasting2.ps1"],
@@ -188,7 +188,7 @@
             "vulns_vars" : {
                 "adcs_esc7": {
                     "viserys": {
-                        "ca_manager": "essos\\viserys.targaryen"
+                        "ca_manager": "orionptoopslabs\\viserys.targaryen"
                     }
                 },
                 "adcs_esc13": {
@@ -203,16 +203,16 @@
             "hostname" : "braavos",
             "type" : "server",
             "local_admin_password": "978i2pF43UJ-",
-            "domain" : "essos.local",
-            "path" : "DC=essos,DC=local",
+            "domain" : "orionptoopslabs.local",
+            "path" : "DC=orionptoopslabs,DC=local",
             "use_laps": true,
             "local_groups" : {
                 "Administrators" : [
-                    "essos\\khal.drogo"
+                    "orionptoopslabs\\khal.drogo"
                 ]
             },
             "Remote Desktop Users" : [
-                "essos\\Dothraki"
+                "orionptoopslabs\\Dothraki"
             ],
             "scripts" : [],
             "vulns" : ["openshares","disable_firewall", "adcs_esc6", "adcs_esc11"],
@@ -221,17 +221,17 @@
                 "sa_password": "sa_P@ssw0rd!Ess0s",
                 "svcaccount" : "sql_svc",
                 "sysadmins" : [
-                    "ESSOS\\khal.drogo"
+                    "ORIONPTOPSLABS\\khal.drogo"
                 ],
                 "executeaslogin" : {
-                    "ESSOS\\jorah.mormont" : "sa"
+                    "ORIONPTOPSLABS\\jorah.mormont" : "sa"
                 },
                 "executeasuser" : {},
                 "linked_servers": {
                     "CASTELBLACK" : {
-                        "data_src": "castelblack.north.sevenkingdoms.local",
+                        "data_src": "castelblack.north.ptolabs.local",
                         "users_mapping": [
-                            {"local_login": "ESSOS\\khal.drogo","remote_login": "sa", "remote_password": "Sup1_sa_P@ssw0rd!"}
+                            {"local_login": "ORIONPTOPSLABS\\khal.drogo","remote_login": "sa", "remote_password": "Sup1_sa_P@ssw0rd!"}
                         ]
                     }
                 }
@@ -239,13 +239,13 @@
         }
     },
     "domains" : {
-        "essos.local" : {
+        "orionptoopslabs.local" : {
             "dc": "dc03",
             "domain_password" : "Ufe-bVXSx9rk",
-            "netbios_name": "ESSOS",
+            "netbios_name": "ORIONPTOPSLABS",
             "ca_server": "Braavos",
-            "trust" : "sevenkingdoms.local",
-            "laps_path": "OU=Laps,DC=essos,DC=local",
+            "trust" : "ptolabs.local",
+            "laps_path": "OU=Laps,DC=orionptoopslabs,DC=local",
             "organisation_units" : {
             },
             "laps_readers": [
@@ -255,64 +255,64 @@
             "groups" : {
                 "universal" : {
                     "greatmaster" : {
-                        "path" : "CN=Users,DC=essos,DC=local"
+                        "path" : "CN=Users,DC=orionptoopslabs,DC=local"
                     }
                 },
                 "global" : {
                     "Targaryen" : {
                         "managed_by" : "viserys.targaryen",
-                        "path" : "CN=Users,DC=essos,DC=local"
+                        "path" : "CN=Users,DC=orionptoopslabs,DC=local"
                     },
                     "Dothraki" : {
                         "managed_by" : "khal.drogo",
-                        "path" : "CN=Users,DC=essos,DC=local"
+                        "path" : "CN=Users,DC=orionptoopslabs,DC=local"
                     },
                     "Dragons":{
                         "managed_by" : "Administrator",
-                        "path" : "CN=Users,DC=essos,DC=local"
+                        "path" : "CN=Users,DC=orionptoopslabs,DC=local"
                     },
                     "QueenProtector":{
                         "managed_by" : "Administrator",
-                        "path" : "CN=Users,DC=essos,DC=local",
-                        "members" : ["ESSOS\\Dragons"]
+                        "path" : "CN=Users,DC=orionptoopslabs,DC=local",
+                        "members" : ["ORIONPTOPSLABS\\Dragons"]
                     },
                     "Domain Admins":{
                         "managed_by" : "Administrator",
-                        "path" : "CN=Users,DC=essos,DC=local",
-                        "members" : ["ESSOS\\QueenProtector"]
+                        "path" : "CN=Users,DC=orionptoopslabs,DC=local",
+                        "members" : ["ORIONPTOPSLABS\\QueenProtector"]
                     }
                 },
                 "domainlocal" : {
                     "DragonsFriends" : {
                         "managed_by" : "daenerys.targaryen",
-                        "path" : "CN=Users,DC=essos,DC=local"
+                        "path" : "CN=Users,DC=orionptoopslabs,DC=local"
                     },
                     "Spys" : {
-                        "path" : "CN=Users,DC=essos,DC=local"
+                        "path" : "CN=Users,DC=orionptoopslabs,DC=local"
                     }
                 }
             },
             "multi_domain_groups_member" : {
                 "DragonsFriends" : [
-                    "sevenkingdoms.local\\tyron.lannister",
-                    "essos.local\\daenerys.targaryen"
+                    "ptolabs.local\\tyron.lannister",
+                    "orionptoopslabs.local\\daenerys.targaryen"
                 ],
                 "Spys" : [
-                    "sevenkingdoms.local\\Small Council"
+                    "ptolabs.local\\Small Council"
                 ]
             },
             "gmsa" : {
                 "gmsa_account": {
                     "gMSA_Name" : "gmsaDragon",
-                    "gMSA_FQDN" : "gmsaDragon.essos.local",
-                    "gMSA_SPNs" : ["HTTP/braavos", "HTTP/braavos.essos.local"],
+                    "gMSA_FQDN" : "gmsaDragon.orionptoopslabs.local",
+                    "gMSA_SPNs" : ["HTTP/braavos", "HTTP/braavos.orionptoopslabs.local"],
                     "gMSA_HostNames" : ["braavos"]
                 }
             },
             "acls" : {
                 "GenericAll_khal_viserys" : {"for": "khal.drogo", "to": "viserys.targaryen", "right": "GenericAll", "inheritance": "None"},
                 "GenericAll_spy_jorah" : {"for": "Spys", "to": "jorah.mormont", "right": "GenericAll", "inheritance": "None"},
-                "GenericAll_khal_esc4" : {"for": "khal.drogo", "to": "CN=ESC4,CN=Certificate Templates,CN=Public Key Services,CN=Services,CN=Configuration,DC=essos,DC=local", "right": "GenericAll", "inheritance": "None"},
+                "GenericAll_khal_esc4" : {"for": "khal.drogo", "to": "CN=ESC4,CN=Certificate Templates,CN=Public Key Services,CN=Services,CN=Configuration,DC=orionptoopslabs,DC=local", "right": "GenericAll", "inheritance": "None"},
                 "WriteProperty_petyer_domadmin" : {"for": "viserys.targaryen", "to": "jorah.mormont", "right": "WriteProperty", "inheritance": "All"},
                 "GenericWrite_DragonsFriends_braavos" : {"for": "DragonsFriends", "to": "braavos$", "right": "GenericWrite", "inheritance": "None"},
                 "GenericAll_missandei_khal" : {"for": "missandei", "to": "khal.drogo", "right": "GenericAll", "inheritance": "None"},
@@ -327,7 +327,7 @@
                     "city"        : "-",
                     "description" : "Darnerys Targaryen",
                     "groups"      : ["Targaryen", "Domain Admins"],
-                    "path"        : "CN=Users,DC=essos,DC=local"
+                    "path"        : "CN=Users,DC=orionptoopslabs,DC=local"
                 },
                 "viserys.targaryen" : {
                     "firstname"   : "viserys",
@@ -336,7 +336,7 @@
                     "city"        : "-",
                     "description" : "Viserys Targaryen",
                     "groups"      : ["Targaryen"],
-                    "path"        : "CN=Users,DC=essos,DC=local"
+                    "path"        : "CN=Users,DC=orionptoopslabs,DC=local"
                 },
                 "khal.drogo" : {
                     "firstname"   : "khal",
@@ -345,7 +345,7 @@
                     "city"        : "-",
                     "description" : "Khal Drogo",
                     "groups"      : ["Dothraki"],
-                    "path"        : "CN=Users,DC=essos,DC=local"
+                    "path"        : "CN=Users,DC=orionptoopslabs,DC=local"
                 },
                 "jorah.mormont" : {
                     "firstname"   : "jorah",
@@ -354,7 +354,7 @@
                     "city"        : "-",
                     "description" : "Jorah Mormont",
                     "groups"      : ["Targaryen"],
-                    "path"        : "CN=Users,DC=essos,DC=local"
+                    "path"        : "CN=Users,DC=orionptoopslabs,DC=local"
                 },
                 "missandei" : {
                     "firstname"   : "missandei",
@@ -363,7 +363,7 @@
                     "city"        : "-",
                     "description" : "missandei",
                     "groups"      : [],
-                    "path"        : "CN=Users,DC=essos,DC=local"
+                    "path"        : "CN=Users,DC=orionptoopslabs,DC=local"
                 },
                 "drogon" : {
                     "firstname"   : "drogon",
@@ -372,7 +372,7 @@
                     "city"        : "-",
                     "description" : "drogon",
                     "groups"      : ["Dragons"],
-                    "path"        : "CN=Users,DC=essos,DC=local"
+                    "path"        : "CN=Users,DC=orionptoopslabs,DC=local"
                 },
                 "sql_svc" : {
                     "firstname"   : "sql",
@@ -381,17 +381,17 @@
                     "city"        : "-",
                     "description" : "sql service",
                     "groups"      : [],
-                    "path"        : "CN=Users,DC=essos,DC=local",
-                    "spns"        : ["MSSQLSvc/braavos.essos.local:1433","MSSQLSvc/braavos.essos.local"]
+                    "path"        : "CN=Users,DC=orionptoopslabs,DC=local",
+                    "spns"        : ["MSSQLSvc/braavos.orionptoopslabs.local:1433","MSSQLSvc/braavos.orionptoopslabs.local"]
                 }
             }
         },
-        "north.sevenkingdoms.local" : {
+        "north.ptolabs.local" : {
             "dc": "dc02",
             "domain_password" : "NgtI75cKV+Pu",
             "netbios_name": "NORTH",
             "trust" : "",
-            "laps_path": "OU=Laps,DC=north,DC=sevenkingdoms,DC=local",
+            "laps_path": "OU=Laps,DC=north,DC=ptolabs,DC=local",
             "organisation_units" : {
             },
             "groups" : {
@@ -399,27 +399,27 @@
                 "global" : {
                     "Stark" : {
                         "managed_by" : "eddard.stark",
-                        "path" : "CN=Users,DC=North,DC=sevenkingdoms,DC=local"
+                        "path" : "CN=Users,DC=North,DC=ptolabs,DC=local"
                     },
                     "Night Watch" : {
                         "managed_by" : "jeor.mormont",
-                        "path" : "CN=Users,DC=North,DC=sevenkingdoms,DC=local"
+                        "path" : "CN=Users,DC=North,DC=ptolabs,DC=local"
                     },
                     "Mormont" : {
                         "managed_by" : "jeor.mormont",
-                        "path" : "CN=Users,DC=North,DC=sevenkingdoms,DC=local"
+                        "path" : "CN=Users,DC=North,DC=ptolabs,DC=local"
                     }
                 },
                 "domainlocal" : {
                     "AcrossTheSea" : {
-                        "path" : "CN=Users,DC=North,DC=sevenkingdoms,DC=local"
+                        "path" : "CN=Users,DC=North,DC=ptolabs,DC=local"
                     }
                 }
             },
             "multi_domain_groups_member" : {},
             "acls" : {
-                "anonymous_rpc" : {"for": "NT AUTHORITY\\ANONYMOUS LOGON", "to": "DC=North,DC=sevenkingdoms,DC=local", "right": "ReadProperty", "inheritance": "All"},
-                "anonymous_rpc2" : {"for": "NT AUTHORITY\\ANONYMOUS LOGON", "to": "DC=North,DC=sevenkingdoms,DC=local", "right": "GenericExecute", "inheritance": "All"}
+                "anonymous_rpc" : {"for": "NT AUTHORITY\\ANONYMOUS LOGON", "to": "DC=North,DC=ptolabs,DC=local", "right": "ReadProperty", "inheritance": "All"},
+                "anonymous_rpc2" : {"for": "NT AUTHORITY\\ANONYMOUS LOGON", "to": "DC=North,DC=ptolabs,DC=local", "right": "GenericExecute", "inheritance": "All"}
             },
             "users" : {
                 "arya.stark" : {
@@ -429,7 +429,7 @@
                     "city"        : "Winterfell",
                     "description" : "Arya Stark",
                     "groups"      : ["Stark"],
-                    "path"        : "CN=Users,DC=North,DC=sevenkingdoms,DC=local"
+                    "path"        : "CN=Users,DC=North,DC=ptolabs,DC=local"
                 },
                 "eddard.stark" : {
                     "firstname"   : "Eddard",
@@ -438,7 +438,7 @@
                     "city"        : "King's Landing",
                     "description" : "Eddard Stark",
                     "groups"      : ["Stark", "Domain Admins"],
-                    "path"        : "CN=Users,DC=North,DC=sevenkingdoms,DC=local"
+                    "path"        : "CN=Users,DC=North,DC=ptolabs,DC=local"
                 },
                 "catelyn.stark" : {
                     "firstname"   : "Catelyn",
@@ -447,7 +447,7 @@
                     "city"        : "King's Landing",
                     "description" : "Catelyn Stark",
                     "groups"      : ["Stark"],
-                    "path"        : "CN=Users,DC=North,DC=sevenkingdoms,DC=local"
+                    "path"        : "CN=Users,DC=North,DC=ptolabs,DC=local"
                 },
                 "robb.stark" : {
                     "firstname"   : "Robb",
@@ -456,7 +456,7 @@
                     "city"        : "Winterfell",
                     "description" : "Robb Stark",
                     "groups"      : ["Stark"],
-                    "path"        : "CN=Users,DC=North,DC=sevenkingdoms,DC=local"
+                    "path"        : "CN=Users,DC=North,DC=ptolabs,DC=local"
                 },
                 "sansa.stark" : {
                     "firstname"   : "Sansa",
@@ -465,8 +465,8 @@
                     "city"        : "Winterfell",
                     "description" : "Sansa Stark",
                     "groups"      : ["Stark"],
-                    "path"        : "CN=Users,DC=North,DC=sevenkingdoms,DC=local",
-                    "spns"        : ["HTTP/eyrie.north.sevenkingdoms.local"]
+                    "path"        : "CN=Users,DC=North,DC=ptolabs,DC=local",
+                    "spns"        : ["HTTP/eyrie.north.ptolabs.local"]
                 },
                 "brandon.stark" : {
                     "firstname"   : "Brandon",
@@ -475,7 +475,7 @@
                     "city"        : "Winterfell",
                     "description" : "Brandon Stark",
                     "groups"      : ["Stark"],
-                    "path"        : "CN=Users,DC=North,DC=sevenkingdoms,DC=local"
+                    "path"        : "CN=Users,DC=North,DC=ptolabs,DC=local"
                 },
                 "rickon.stark" : {
                     "firstname"   : "Rickon",
@@ -484,7 +484,7 @@
                     "city"        : "Winterfell",
                     "description" : "Rickon Stark",
                     "groups"      : ["Stark"],
-                    "path"        : "CN=Users,DC=North,DC=sevenkingdoms,DC=local"
+                    "path"        : "CN=Users,DC=North,DC=ptolabs,DC=local"
                 },
                 "hodor" : {
                     "firstname"   : "hodor",
@@ -493,7 +493,7 @@
                     "city"        : "Winterfell",
                     "description" : "Brainless Giant",
                     "groups"      : ["Stark"],
-                    "path"        : "CN=Users,DC=North,DC=sevenkingdoms,DC=local"
+                    "path"        : "CN=Users,DC=North,DC=ptolabs,DC=local"
                 },
                 "jon.snow" : {
                     "firstname"   : "Jon",
@@ -502,8 +502,8 @@
                     "city"        : "Castel Black",
                     "description" : "Jon Snow",
                     "groups"      : ["Stark", "Night Watch"],
-                    "path"        : "CN=Users,DC=North,DC=sevenkingdoms,DC=local",
-                    "spns"        : ["HTTP/thewall.north.sevenkingdoms.local"]
+                    "path"        : "CN=Users,DC=North,DC=ptolabs,DC=local",
+                    "spns"        : ["HTTP/thewall.north.ptolabs.local"]
                 },
                 "samwell.tarly" : {
                     "firstname"   : "Samwell",
@@ -512,7 +512,7 @@
                     "city"        : "Castel Black",
                     "description" : "Samwell Tarly (Password : Heartsbane)",
                     "groups"      : ["Night Watch"],
-                    "path"        : "CN=Users,DC=North,DC=sevenkingdoms,DC=local"
+                    "path"        : "CN=Users,DC=North,DC=ptolabs,DC=local"
                 },
                 "jeor.mormont" : {
                     "firstname"   : "Jeor",
@@ -521,7 +521,7 @@
                     "city"        : "Castel Black",
                     "description" : "Jeor Mormont",
                     "groups"      : ["Night Watch", "Mormont"],
-                    "path"        : "CN=Users,DC=North,DC=sevenkingdoms,DC=local"
+                    "path"        : "CN=Users,DC=North,DC=ptolabs,DC=local"
                 },
                 "sql_svc" : {
                     "firstname"   : "sql",
@@ -530,60 +530,60 @@
                     "city"        : "-",
                     "description" : "sql service",
                     "groups"      : [],
-                    "path"        : "CN=Users,DC=North,DC=sevenkingdoms,DC=local",
-                    "spns"        : ["MSSQLSvc/castelblack.north.sevenkingdoms.local:1433","MSSQLSvc/castelblack.north.sevenkingdoms.local"]
+                    "path"        : "CN=Users,DC=North,DC=ptolabs,DC=local",
+                    "spns"        : ["MSSQLSvc/castelblack.north.ptolabs.local:1433","MSSQLSvc/castelblack.north.ptolabs.local"]
                 }
             }
         },
-        "sevenkingdoms.local" : {
+        "ptolabs.local" : {
             "dc": "dc01",
             "domain_password" : "8dCT-DJjgScp",
-            "netbios_name": "SEVENKINGDOMS",
-            "trust" : "essos.local",
-            "laps_path": "OU=Laps,DC=sevenkingdoms,DC=local",
+            "netbios_name": "PTOLABS",
+            "trust" : "orionptoopslabs.local",
+            "laps_path": "OU=Laps,DC=ptolabs,DC=local",
             "organisation_units" : {
-                "Vale"        : { "path" : "DC=sevenkingdoms,DC=local"},
-                "IronIslands" : { "path" : "DC=sevenkingdoms,DC=local"},
-                "Riverlands"  : { "path" : "DC=sevenkingdoms,DC=local"},
-                "Crownlands"  : { "path" : "DC=sevenkingdoms,DC=local"},
-                "Stormlands"  : { "path" : "DC=sevenkingdoms,DC=local"},
-                "Westerlands" : { "path" : "DC=sevenkingdoms,DC=local"},
-                "Reach"       : { "path" : "DC=sevenkingdoms,DC=local"},
-                "Dorne"       : { "path" : "DC=sevenkingdoms,DC=local"}
+                "Vale"        : { "path" : "DC=ptolabs,DC=local"},
+                "IronIslands" : { "path" : "DC=ptolabs,DC=local"},
+                "Riverlands"  : { "path" : "DC=ptolabs,DC=local"},
+                "Crownlands"  : { "path" : "DC=ptolabs,DC=local"},
+                "Stormlands"  : { "path" : "DC=ptolabs,DC=local"},
+                "Westerlands" : { "path" : "DC=ptolabs,DC=local"},
+                "Reach"       : { "path" : "DC=ptolabs,DC=local"},
+                "Dorne"       : { "path" : "DC=ptolabs,DC=local"}
             },
             "groups" : {
                 "universal" : {},
                 "global" : {
                     "Lannister" : {
                         "managed_by" : "tywin.lannister",
-                        "path" : "OU=Westerlands,DC=sevenkingdoms,DC=local"
+                        "path" : "OU=Westerlands,DC=ptolabs,DC=local"
                     },
                     "Baratheon" : {
                         "managed_by" : "robert.baratheon",
-                        "path" : "OU=Stormlands,DC=sevenkingdoms,DC=local"
+                        "path" : "OU=Stormlands,DC=ptolabs,DC=local"
                     },
                     "Small Council" : {
-                        "path" : "OU=Crownlands,DC=sevenkingdoms,DC=local"
+                        "path" : "OU=Crownlands,DC=ptolabs,DC=local"
                     },
                     "DragonStone" : {
-                        "path" : "OU=Crownlands,DC=sevenkingdoms,DC=local"
+                        "path" : "OU=Crownlands,DC=ptolabs,DC=local"
                     },
                     "KingsGuard" : {
-                        "path" : "OU=Crownlands,DC=sevenkingdoms,DC=local"
+                        "path" : "OU=Crownlands,DC=ptolabs,DC=local"
                     },
                     "DragonRider" : {
-                        "path" : "OU=Crownlands,DC=sevenkingdoms,DC=local"
+                        "path" : "OU=Crownlands,DC=ptolabs,DC=local"
                     }
                 },
                 "domainlocal" : {
                     "AcrossTheNarrowSea" : {
-                        "path" : "CN=Users,DC=sevenkingdoms,DC=local"
+                        "path" : "CN=Users,DC=ptolabs,DC=local"
                     }
                 }
             },
             "multi_domain_groups_member" : {
                 "AcrossTheNarrowSea" : [
-                    "essos.local\\daenerys.targaryen"
+                    "orionptoopslabs.local\\daenerys.targaryen"
                 ]
             },
             "acls" : {
@@ -597,8 +597,8 @@
                 "GenericAll_stanis_dc" : {"for": "stannis.baratheon", "to": "kingslanding$", "right": "GenericAll", "inheritance": "None"},
                 "GenericAll_group_acrrosdom_dc" : {"for": "AcrossTheNarrowSea", "to": "kingslanding$", "right": "GenericAll", "inheritance": "None"},
                 "GenericAll_varys_domadmin" : {"for": "lord.varys", "to": "Domain Admins", "right": "GenericAll", "inheritance": "None"},
-                "GenericAll_varys_domadmin_holder" : {"for": "lord.varys", "to": "CN=AdminSDHolder,CN=System,DC=sevenkingdoms,DC=local", "right": "GenericAll", "inheritance": "None"},
-                "WriteDACL_renly_Crownlands" : {"for": "renly.baratheon", "to": "OU=Crownlands,DC=sevenkingdoms,DC=local", "right": "WriteDacl", "inheritance": "None"}
+                "GenericAll_varys_domadmin_holder" : {"for": "lord.varys", "to": "CN=AdminSDHolder,CN=System,DC=ptolabs,DC=local", "right": "GenericAll", "inheritance": "None"},
+                "WriteDACL_renly_Crownlands" : {"for": "renly.baratheon", "to": "OU=Crownlands,DC=ptolabs,DC=local", "right": "WriteDacl", "inheritance": "None"}
             },
             "users" : {
                 "tywin.lannister" : {
@@ -608,7 +608,7 @@
                     "city"        : "Casterly Rock",
                     "description" : "Tywin Lanister",
                     "groups"      : ["Lannister"],
-                    "path"        : "OU=Crownlands,DC=sevenkingdoms,DC=local"
+                    "path"        : "OU=Crownlands,DC=ptolabs,DC=local"
                 },
                 "jaime.lannister" : {
                     "firstname"   : "Jaime",
@@ -617,7 +617,7 @@
                     "city"        : "King's Landing",
                     "description" : "Jaime Lanister",
                     "groups"      : ["Lannister"],
-                    "path"        : "OU=Crownlands,DC=sevenkingdoms,DC=local"
+                    "path"        : "OU=Crownlands,DC=ptolabs,DC=local"
                 },
                 "cersei.lannister" : {
                     "firstname"   : "Cersei",
@@ -626,7 +626,7 @@
                     "city"        : "King's Landing",
                     "description" : "Cersei Lanister",
                     "groups"      : ["Lannister","Baratheon","Domain Admins","Small Council"],
-                    "path"        : "OU=Crownlands,DC=sevenkingdoms,DC=local"
+                    "path"        : "OU=Crownlands,DC=ptolabs,DC=local"
                 },
                 "tyron.lannister" : {
                     "firstname"   : "Tyron",
@@ -635,7 +635,7 @@
                     "city"        : "King's Landing",
                     "description" : "Tyron Lanister",
                     "groups"      : ["Lannister"],
-                    "path"        : "OU=Westerlands,DC=sevenkingdoms,DC=local"
+                    "path"        : "OU=Westerlands,DC=ptolabs,DC=local"
                 },
                 "robert.baratheon" : {
                     "firstname"   : "Robert",
@@ -644,7 +644,7 @@
                     "city"        : "King's Landing",
                     "description" : "Robert Lanister",
                     "groups"      : ["Baratheon","Domain Admins","Small Council","Protected Users"],
-                    "path"        : "OU=Crownlands,DC=sevenkingdoms,DC=local"
+                    "path"        : "OU=Crownlands,DC=ptolabs,DC=local"
                 },
                 "joffrey.baratheon" : {
                     "firstname"   : "Joffrey",
@@ -653,7 +653,7 @@
                     "city"        : "King's Landing",
                     "description" : "Joffrey Baratheon",
                     "groups"      : ["Baratheon","Lannister"],
-                    "path"        : "OU=Crownlands,DC=sevenkingdoms,DC=local"
+                    "path"        : "OU=Crownlands,DC=ptolabs,DC=local"
                 },
                 "renly.baratheon" : {
                     "firstname"   : "Renly",
@@ -662,7 +662,7 @@
                     "city"        : "King's Landing",
                     "description" : "Renly Baratheon",
                     "groups"      : ["Baratheon","Small Council"],
-                    "path"        : "OU=Crownlands,DC=sevenkingdoms,DC=local"
+                    "path"        : "OU=Crownlands,DC=ptolabs,DC=local"
                 },
                 "stannis.baratheon" : {
                     "firstname"   : "Stannis",
@@ -671,7 +671,7 @@
                     "city"        : "King's Landing",
                     "description" : "Stannis Baratheon",
                     "groups"      : ["Baratheon","Small Council"],
-                    "path"        : "OU=Crownlands,DC=sevenkingdoms,DC=local"
+                    "path"        : "OU=Crownlands,DC=ptolabs,DC=local"
                 },
                 "petyer.baelish" : {
                     "firstname"   : "Petyer",
@@ -680,7 +680,7 @@
                     "city"        : "King's Landing",
                     "description" : "Petyer Baelish",
                     "groups"      : ["Small Council"],
-                    "path"        : "OU=Crownlands,DC=sevenkingdoms,DC=local"
+                    "path"        : "OU=Crownlands,DC=ptolabs,DC=local"
                 },
                 "lord.varys" : {
                     "firstname"   : "Lord",
@@ -689,7 +689,7 @@
                     "city"        : "King's Landing",
                     "description" : "Lord Varys",
                     "groups"      : ["Small Council"],
-                    "path"        : "OU=Crownlands,DC=sevenkingdoms,DC=local"
+                    "path"        : "OU=Crownlands,DC=ptolabs,DC=local"
                 },
                 "maester.pycelle" : {
                     "firstname"   : "Maester",
@@ -698,7 +698,7 @@
                     "city"        : "King's Landing",
                     "description" : "Maester Pycelle",
                     "groups"      : ["Small Council"],
-                    "path"        : "OU=Crownlands,DC=sevenkingdoms,DC=local"
+                    "path"        : "OU=Crownlands,DC=ptolabs,DC=local"
                 }
             }
         }
